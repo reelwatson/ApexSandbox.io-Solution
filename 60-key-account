@@ -1,0 +1,30 @@
+public Boolean isKeyAccount(Account a) {
+    //code here
+    Boolean keyAccount = false;
+    switch on (a.Industry) {
+        when null {
+            keyAccount = true;
+        }
+        when 'Banking' {
+            if (a.AnnualRevenue >= 600000) {
+                keyAccount = true;
+            }
+        }
+        when 'Technology' {
+            if (a.AnnualRevenue >= 800000) {
+                keyAccount = true;
+            }
+        }
+        when 'Retail' {
+            if (a.AnnualRevenue >= 2000000) {
+                keyAccount = true;
+            }
+        }
+        when else {
+            if (a.AnnualRevenue >= 500000) {
+                keyAccount = true;
+            }
+        }
+    }
+    return keyAccount;
+}
