@@ -1,0 +1,31 @@
+public String nameFromEmail(String email) {
+    //code here
+    String firstName = email.subStringBefore('.');
+    String lastName = email.subStringBetween('.','@');
+
+    firstName = firstName.toLowerCase();
+    lastName = lastName.toLowerCase();
+    
+    firstName = firstName.capitalize();
+    lastName = lastName.capitalize();
+    
+    String fullName = firstName + ' ' + lastName;
+
+    return fullName;
+
+}
+
+/*
+To add error handling, put this between lines 4 and 6:
+if (firstName == null || lastName == null) {
+    System.debug('The inputs for first and last name cannot be null');
+}
+
+else if (firstName == '' || lastName == '') {
+    System.debug('Check if the first or last name are blank');
+}
+
+else if (!firstName.isAlphaSpace() || !lastName.isAlphaSpace()) {
+    System/debug('You can only include letters and spaces in a person's name');
+}
+*/
