@@ -1,0 +1,20 @@
+public List<Account> checkAccounts(List<Account> accounts){
+    // code here
+        List<Account> goodAccList = new List<Account>();
+        if (accounts == null || accounts.isEmpty()) {
+            throw new IllegalArgumentException('accounts should not be null');
+        }
+        else {
+            for (Account acc : accounts) {
+                if (acc.BillingCity != null && !String.isBlank(acc.BillingCity)) {
+                    goodAccList.add(acc);
+                }
+                else {
+                    throw new AccountException('Invalid BillingCity');
+                }
+            }
+        return goodAccList;
+        }
+    }
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
