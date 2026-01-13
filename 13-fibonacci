@@ -1,0 +1,18 @@
+public Integer fibonacci(Integer n) {
+    Integer oldValue = 1;
+    Integer newValue = 1;
+    Integer fibonacciValue;
+    if (n <= 2) {
+        fibonacciValue = 1;
+        return fibonacciValue;
+    }
+    else {
+        for (Integer i = 3; i <= n; i++) {
+            fibonacciValue = oldValue + newValue;
+            oldValue = newValue;
+            newValue = fibonacciValue;
+            
+        }
+        return fibonacciValue;
+    }
+}
