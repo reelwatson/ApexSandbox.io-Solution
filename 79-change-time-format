@@ -1,0 +1,32 @@
+public String changeTimeFormat(String strTime) {
+    //code here
+    String hour = strTime.substringBefore(':');
+    String minute = strTime.substringAfter(':');
+
+    Integer integerHour = Integer.valueOf(hour);
+    if (integerHour > 12) {
+        integerHour = integerHour - 12;
+        if (integerHour >= 1 && integerHour <= 9) {
+            hour = '0' + integerHour.format();
+        }
+        else {
+            hour = integerHour.format();
+        }
+        minute = minute + ' PM';
+    }
+    else if (integerHour == 12) {
+        minute = minute + ' PM';
+        hour = integerHour.format();
+    }
+    else if (integerHour == 0) {
+        minute = minute + ' AM';
+        hour = '12';
+    }
+
+    else {
+        minute = minute + ' AM';
+    }
+    
+    String twelveHourString = hour + ':' + minute;
+    return twelveHourString;
+}
