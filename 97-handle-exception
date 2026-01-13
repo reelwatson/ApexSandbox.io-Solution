@@ -1,0 +1,19 @@
+public String divide(Integer a, Integer b){
+    //code here
+    String result;
+    try {
+        if (a == null || b == null) {
+            result = 'Attempt to de-reference a null object';
+        }
+        else if (b == 0) {
+            result = 'Divide by 0';
+        }
+        else {
+            result = String.valueOf(a/b);
+        }
+    }
+    catch (Exception e) {
+        result = ('We could not complete this divide function: ' + e.getMessage());
+    }
+    return result;
+}
