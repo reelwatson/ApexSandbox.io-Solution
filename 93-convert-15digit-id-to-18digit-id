@@ -1,0 +1,23 @@
+public String convert15to18DigitId(String fifteenDigit)
+{
+    //code here
+    /*
+    Order of the checks matters:
+    FIRST check for null,
+    THEN check is length = 15
+    FINALLY respond
+    */
+    if (String.isBlank(fifteenDigit)) {
+        return null;
+    }
+    else if (fifteenDigit.length() != 15) {
+        return '-1';
+    }
+    else {
+        return (Id) fifteenDigit;
+    }
+    /*
+    Interesting that casting will create an 18-digit Id from a 15-digit string 
+    Also interesting you can return an Id in a method that wants to return a string
+    */
+}
