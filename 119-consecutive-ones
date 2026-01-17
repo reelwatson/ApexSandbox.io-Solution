@@ -7,14 +7,14 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
 
     for (Integer num : numbers) {
         if (num == 1) {
-            consecutiveOnes++;
+            consecutiveOnesSoFar++;
         }
         else {
-            if (consecutiveOnes > longestChainOfOnes) {
-                longestChainOfOnes = consecutiveOnes;
+            if (consecutiveOnesSoFar > longestChainOfOnes) {
+                longestChainOfOnes = consecutiveOnesSoFar;
             }
-            consecutiveOnes = 0;
+            consecutiveOnesSoFar = 0;
         }
     }
-    return consecutiveOnes;
+    return consecutiveOnesSoFar;
 }
