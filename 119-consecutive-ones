@@ -2,12 +2,17 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
     //code here
 
     //Loop in a loop? To track current sum of consecutive ones vs largest sum so far in array
-    Integer consecutiveOnes = 0;
+    Integer consecutiveOnesSoFar = 0;
+    Integer longestChainOfOnes = 0;
+
     for (Integer num : numbers) {
         if (num == 1) {
             consecutiveOnes++;
         }
         else {
+            if (consecutiveOnes > longestChainOfOnes) {
+                longestChainOfOnes = consecutiveOnes;
+            }
             consecutiveOnes = 0;
         }
     }
