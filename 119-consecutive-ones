@@ -8,11 +8,12 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
     for (Integer num : numbers) {
         if (num == 1) {
             consecutiveOnesSoFar++;
-        }
-        else {
             if (consecutiveOnesSoFar > longestChainOfOnes) {
                 longestChainOfOnes = consecutiveOnesSoFar;
             }
+        }
+        else {
+            
             consecutiveOnesSoFar = 0;
         }
     }
