@@ -1,0 +1,12 @@
+public List<Integer> evenNumbers(Integer n) {
+    //code here
+    Integer sum = 0;
+    List<Integer> sumList = new List<Integer>();
+
+    for (Integer i = 0; i < n; i++) {
+        sum += 2;
+        sumList.add(sum);
+    }
+
+    return sumList;
+}
