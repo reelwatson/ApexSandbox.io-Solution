@@ -13,7 +13,6 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
             }
         }
         else {
-            
             consecutiveOnesSoFar = 0;
         }
     }
