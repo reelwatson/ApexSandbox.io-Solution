@@ -14,6 +14,9 @@ public Boolean companionPlants(List<String> plants) {
         if (plants.size() == 0) {
             eachHasCompanion = true;
         }
+        else if (plants.size() == 1) {
+            eachHasCompanion = false;
+        }
         else if (plants[i] == 'onions' && (plants[i+1] == 'lettuce' || plants[i+1] == 'carrots' || plants[i+1] == 'tomatoes')) {
             eachHasCompanion = true;
         }
