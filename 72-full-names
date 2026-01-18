@@ -4,7 +4,7 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     String fullName = '';
 
     // Loop through list and check for first names
-    for (Integer i == 0; i < firstNames.size(); i++) {
+    for (Integer i = 0; i < firstNames.size(); i++) {
         if (firstNames[i] != null && firstNames[i] != '') {
             // Add first name to fullName string if evaluates to true
             fullName = fullNames[i];
@@ -15,7 +15,6 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
             // Add last name to fullName string if evaluates to true
             fullName = fullName + ' ' + lastNames[i];
         }
-
 
         // Add fullName string to fullNameList
         fullNameList.add(fullName);
