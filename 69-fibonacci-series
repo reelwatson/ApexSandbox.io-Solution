@@ -12,7 +12,7 @@ public List<Integer> fibonacciSeries(Integer n) {
         fibonacciList.add(1);
     }
 
-    if (n == 2) {
+    else if (n == 2) {
         fibonacciList.add(1,1);
     }
 
