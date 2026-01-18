@@ -2,13 +2,32 @@ public Boolean companionPlants(List<String> plants) {
     //code here
     Boolean eachHasCompanion = false;
     // Create variables for first comparison string, second comparison string
-    String firstPlant = plants[0;]
+    String firstPlant = plants[0];
     String secondPlant = plants[1];
 
-    for (String plant : plants) {
-        
+    for (Integer i = 0; i <= plants.size() - 1; i++) {
+        if (plant[i] == 'onions' && (plant[i+1] == 'lettuce' || plant[i+1] == 'carrots' || plant[i+1] == 'tomatoes')) {
+            eachHasCompanion = true;
+        }
+        else if (plant[i] == 'lettuce' && (plant[i+1] == 'cucumbers' || plant[i+1] == 'onions')) {
+            eachHasCompanion = true;
+        }
+        else if (plant[i] == 'cucumbers' && (plant[i+1] == 'lettuce')) {
+            eachHasCompanion = true;
+        }
+        else if (plant[i+1] == 'onions' && (plant[i] == 'carrots' || plant[i] == 'tomatoes')) {
+            eachHasCompanion = true;
+        }
     }
-
 
     return eachHasCompanion;
 }
+
+/*
+If the first plant is onions, the second should be lettuce, carrots, or tomatoes
+If the first plant is lettuce, then the second should be cucumbers or onions. 
+If the first plant is cucumbers, the second should be lettuce. 
+If the first plant is carrots, the second should be onions. 
+If the first plant is tomatoes, the second should be onions. 
+If none of the above match, the plants are not companions.
+*/
