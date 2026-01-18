@@ -7,7 +7,7 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     for (Integer i = 0; i < firstNames.size(); i++) {
         if (firstNames[i] != null && firstNames[i] != '') {
             // Add first name to fullName string if evaluates to true
-            fullName = fullNames[i];
+            fullName = firstNames[i];
         }
 
         // Check if last name entry is not null or blank
