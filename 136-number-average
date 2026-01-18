@@ -9,6 +9,7 @@ public Decimal average(List<Decimal> numbers){
     }
 
     average = sum / size;
+    average = average.setScale(-2);
     return average;
 
 }
