@@ -1,0 +1,14 @@
+public List<String> orgNames(List<String> adjectives, List<String> animals) {
+    //code here
+    //Loops in loops
+    List<String> nameComboList = new List<String>();
+    String nameCombo;
+
+    for (String adjective : adjectives) {
+        for (String animal : animals) {
+            nameCombo = adjective + animal;
+            nameComboList.add(nameCombo);
+        }
+    }
+    return nameComboList;
+}
