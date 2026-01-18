@@ -6,16 +6,12 @@ public List<Integer> fibonacciSeries(Integer n) {
     Integer integer2 = 1;
     Integer fibonacciValue;
 
-    List<Integer> fibonacciList = new List<Integer>();
-
-    if (n == 1) {
-        fibonacciList.add(1);
-    }
+    List<Integer> fibonacciList = new List<Integer> {1};
 
     // TO DO: Fix here! This is where the problem starts
     // 
-    else if (n == 2) {
-        fibonacciList.add(1,1);
+    if (n == 2) {
+        fibonacciList.add(1);
     }
 
     else {
