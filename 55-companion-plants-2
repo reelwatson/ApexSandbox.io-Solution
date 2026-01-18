@@ -1,21 +1,18 @@
 public Boolean companionPlants(List<String> plants) {
     //code here
     Boolean eachHasCompanion = false;
-    // Create variables for first comparison string, second comparison string
-    String firstPlant = plants[0];
-    String secondPlant = plants[1];
 
     for (Integer i = 0; i <= plants.size() - 1; i++) {
-        if (plant[i] == 'onions' && (plant[i+1] == 'lettuce' || plant[i+1] == 'carrots' || plant[i+1] == 'tomatoes')) {
+        if (plants[i] == 'onions' && (plants[i+1] == 'lettuce' || plants[i+1] == 'carrots' || plants[i+1] == 'tomatoes')) {
             eachHasCompanion = true;
         }
-        else if (plant[i] == 'lettuce' && (plant[i+1] == 'cucumbers' || plant[i+1] == 'onions')) {
+        else if (plants[i] == 'lettuce' && (plants[i+1] == 'cucumbers' || plants[i+1] == 'onions')) {
             eachHasCompanion = true;
         }
-        else if (plant[i] == 'cucumbers' && (plant[i+1] == 'lettuce')) {
+        else if (plants[i] == 'cucumbers' && (plants[i+1] == 'lettuce')) {
             eachHasCompanion = true;
         }
-        else if (plant[i+1] == 'onions' && (plant[i] == 'carrots' || plant[i] == 'tomatoes')) {
+        else if (plants[i+1] == 'onions' && (plants[i] == 'carrots' || plants[i] == 'tomatoes')) {
             eachHasCompanion = true;
         }
     }
