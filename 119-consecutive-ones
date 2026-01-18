@@ -16,5 +16,5 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
             consecutiveOnesSoFar = 0;
         }
     }
-    return consecutiveOnesSoFar;
+    return longestChainOfOnes;
 }
