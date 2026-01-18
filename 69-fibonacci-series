@@ -8,13 +8,11 @@ public List<Integer> fibonacciSeries(Integer n) {
 
     List<Integer> fibonacciList = new List<Integer> {1};
 
-    // TO DO: Fix here! This is where the problem starts
-    // 
     if (n == 2) {
         fibonacciList.add(1);
     }
 
-    else {
+    else if (n >= 3) {
         for (Integer i = 3; i <= n; i++) {
             fibonacciValue = integer1 + integer2;
             fibonacciList.add(fibonacciValue);
