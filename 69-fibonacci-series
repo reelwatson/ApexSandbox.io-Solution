@@ -1,6 +1,6 @@
 public List<Integer> fibonacciSeries(Integer n) {
     //code here
-    // See solution for ApexSandbox.io but now add each number after first two ones to new List<Integer>
+    // TO DO: refactor for efficiency? Feel like could be more efficient
 
     Integer integer1 = 1;
     Integer integer2 = 1;
