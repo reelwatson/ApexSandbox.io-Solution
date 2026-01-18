@@ -1,0 +1,30 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    //code here
+    // See solution for ApexSandbox.io but now add each number after first two ones to new List<Integer>
+
+    Integer integer1 = 1;
+    Integer integer2 = 1;
+    Integer fibonacciValue;
+
+    List<Integer> fibonacciList = new List<Integer>();
+
+    if (n == 1) {
+        fibonacciList.add(1);
+    }
+
+    if (n == 2) {
+        fibonacciList.add(1);
+    }
+
+    else {
+        for (Integer i = 3; i <= n; i++) {
+            fibonacciValue = integer1 + integer2;
+            fibonacciList.add(fibonacciValue);
+            integer1 = integer2;
+            integer2 = fibonacciValue;
+        }
+    }
+
+return fibonacciList;
+    
+}
