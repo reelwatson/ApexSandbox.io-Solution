@@ -21,3 +21,5 @@ public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
     }
     return fullNameList;
 }
+
+// Note to self: earlier public token error caused by statement 'i == 0' rather than 'i = 0'
