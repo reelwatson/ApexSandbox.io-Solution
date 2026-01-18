@@ -3,6 +3,15 @@ public Boolean companionPlants(List<String> plants) {
     Boolean eachHasCompanion = false;
 
     for (Integer i = 0; i <= plants.size() - 1; i++) {
+
+        // TO DO: fix System.ListException: List index out of bounds
+        /*
+        TO DO: System.AssertException: Assertion Failed: No plants means our condition is true: 
+        all plants are next to a companion plant if there are no plants. 
+        In logic, such statements are called vacuously true. I am sorry for this test case. (lol)
+        Just return true if the array has size 0.: Expected: true, Actual: false
+        */
+
         if (plants[i] == 'onions' && (plants[i+1] == 'lettuce' || plants[i+1] == 'carrots' || plants[i+1] == 'tomatoes')) {
             eachHasCompanion = true;
         }
