@@ -5,7 +5,9 @@ public Boolean companionPlants(List<String> plants) {
     String firstPlant = plants[0;]
     String secondPlant = plants[1];
 
-    for (String plant : plants)
+    for (String plant : plants) {
+        
+    }
 
 
     return eachHasCompanion;
