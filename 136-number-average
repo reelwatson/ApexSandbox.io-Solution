@@ -1,0 +1,14 @@
+public Decimal average(List<Decimal> numbers){
+    // your code here
+    Decimal sum = 0;
+    Decimal average = 0;
+    Integer size = numbers.size();
+
+    for (Decimal num : numbers) {
+        sum += num;
+    }
+
+    average = sum / size;
+    return average;
+
+}
