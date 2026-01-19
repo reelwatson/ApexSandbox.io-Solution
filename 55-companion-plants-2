@@ -24,7 +24,7 @@ public Boolean companionPlants(List<String> plants) {
         else if (plants[i-1] == 'cucumbers' && (plants[i] == 'lettuce')) {
             eachHasCompanion = true;
         }
-        else if (plants[i-1] == 'onions' && (plants[i] == 'carrots' || plants[i] == 'tomatoes')) {
+        else if (plants[i] == 'onions' && (plants[i-1] == 'carrots' || plants[i-1] == 'tomatoes')) {
             eachHasCompanion = true;
         }
     }
