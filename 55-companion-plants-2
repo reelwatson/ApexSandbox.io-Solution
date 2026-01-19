@@ -1,33 +1,38 @@
 public Boolean companionPlants(List<String> plants) {
     //code here
     Boolean eachHasCompanion = false;
+    String firstPlant;
+    String secondPlant;
 
-    if (plants.size() == 0) {
+    if (plant == null || plants.size() == 0) {
             eachHasCompanion = true;
         }
-        else if (plants.size() == 1) {
+
+    else if (plants.size() == 1) {
             eachHasCompanion = false;
-        }
-
-        else {
-            for (Integer i = 1; i < plants.size(); i++) {
-        
-        // TO DO: fix System.ListException: List index out of bounds
-
-        
-            if (plants[i-1] == 'onions' && (plants[i] == 'lettuce' || plants[i] == 'carrots' || plants[i] == 'tomatoes')) {
-            eachHasCompanion = true;
-        }
-        else if (plants[i-1] == 'lettuce' && (plants[i] == 'cucumbers' || plants[i] == 'onions')) {
-            eachHasCompanion = true;
-        }
-        else if (plants[i-1] == 'cucumbers' && (plants[i] == 'lettuce')) {
-            eachHasCompanion = true;
-        }
-        else if (plants[i] == 'onions' && (plants[i-1] == 'carrots' || plants[i-1] == 'tomatoes')) {
-            eachHasCompanion = true;
-        }
     }
+
+    else {
+        for (Integer i = 1; i < plants.size(); i++) {
+            firstPlant = plants[i-1];
+            secondPlant = plants[i];
+
+               if (firstPlant == 'onions' && (secondPlant == 'lettuce' || secondPlant == 'carrots' || secondPlant == 'tomatoes')) {
+                    eachHasCompanion = true;
+                }
+                else if (firstPlant == 'lettuce' && (secondPlant == 'cucumbers' || secondPlant == 'onions')) {
+                    eachHasCompanion = true;
+                }
+                else if (firstPlant == 'cucumbers' && (secondPlant == 'lettuce')) {
+                    eachHasCompanion = true;
+                }
+                else if (secondPlant == 'onions' && (firstPlant == 'carrots' || firstPlant == 'tomatoes')) {
+                    eachHasCompanion = true;
+            }
+            else {
+                eachHasCompanion = false;
+            }
+        }
     }
     return eachHasCompanion;
 }
