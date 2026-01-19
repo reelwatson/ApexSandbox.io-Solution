@@ -2,8 +2,8 @@ public Boolean companionPlants(List<String> plants) {
     //code here
     Boolean eachHasCompanion = false;
 
-    for (Integer i = 0; i <= plants.size() - 1; i++) {
-
+    for (Integer i = 0; i < plants.size() - 1; i++) {
+        
         // TO DO: fix System.ListException: List index out of bounds
 
         if (plants.size() == 0) {
@@ -12,16 +12,16 @@ public Boolean companionPlants(List<String> plants) {
         else if (plants.size() == 1) {
             eachHasCompanion = false;
         }
-        else if (plants[i] == 'onions' && (plants[i+1] == 'lettuce' || plants[i+1] == 'carrots' || plants[i+1] == 'tomatoes')) {
+        else if (plants[i-1] == 'onions' && (plants[i] == 'lettuce' || plants[i] == 'carrots' || plants[i] == 'tomatoes')) {
             eachHasCompanion = true;
         }
-        else if (plants[i] == 'lettuce' && (plants[i+1] == 'cucumbers' || plants[i+1] == 'onions')) {
+        else if (plants[i-1] == 'lettuce' && (plants[i] == 'cucumbers' || plants[i] == 'onions')) {
             eachHasCompanion = true;
         }
-        else if (plants[i] == 'cucumbers' && (plants[i+1] == 'lettuce')) {
+        else if (plants[i-1] == 'cucumbers' && (plants[i] == 'lettuce')) {
             eachHasCompanion = true;
         }
-        else if (plants[i+1] == 'onions' && (plants[i] == 'carrots' || plants[i] == 'tomatoes')) {
+        else if (plants[i-1] == 'onions' && (plants[i] == 'carrots' || plants[i] == 'tomatoes')) {
             eachHasCompanion = true;
         }
     }
