@@ -31,7 +31,8 @@ public Boolean companionPlants(List<String> plants) {
             }
             else {
                 eachHasCompanion = false;
-                break;
+                break; //This is the most critical part! Otherwise it will check the rest of the list and potentially
+                // assign "true" even when there are two 'bad' plants next to each other
             }
         }
     }
