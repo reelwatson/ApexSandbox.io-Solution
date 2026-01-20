@@ -5,6 +5,10 @@ public boolean isSorted(List<Integer> numbers) {
     //Create two new lists to hold copies of numbers
     List<Integer> ascendingNumbers = numbers.sort();
     List<Integer> descendingNumbers = new List<Integer>();
+
+    for (Integer i == numbers.size() - 1; i >= 0; i--) {
+            descendingNumbers.add(numbers[i]);    
+        }
     
     //For sorted ascending, create copy of numbers, use sort(), and compare the two lists to see if true
     if (numbers == ascendingNumbers) {
@@ -13,13 +17,8 @@ public boolean isSorted(List<Integer> numbers) {
 
     //For sorted descending, create copy of numbers, iterate from numbers.size() - 1 to 0 index,
     //and compare the two lists to see if true
-    else if {
-        for (Integer i == numbers.size() - 1; i >= 0; i--) {
-            descendingNumbers.add(numbers[i]);    
-        }
-        if (descendingNumbers == numbers) {
+    else if (descendingNumbers == numbers) {
                 sortedSomehow = true;
             }
-    }
     return sortedSomehow;
 }
