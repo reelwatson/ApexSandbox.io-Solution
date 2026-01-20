@@ -26,4 +26,4 @@ public Boolean companionPlants(String plant1, String plant2) {
  If the first plant is carrots, the second should be onions. 
  If the first plant is tomatoes, the second should be onions. 
  If none of the above match, the plants are not companions.
-*.
+*/
