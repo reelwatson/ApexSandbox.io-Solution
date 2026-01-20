@@ -24,8 +24,8 @@ public Boolean companionPlants(List<String> plants) {
             String firstPlant = plants[i - 1];
             String secondPlant = plants[i];
 
-            if (!companionPlants.containsKey(firstPlant) ||
-            !companionPlants.get(firstPlant).contains(secondPlant)) {
+            if (!companionPlants.containsKey(firstPlant) 
+            || (companionPlants.containsKey(firstPlant) && !companionPlants.get(firstPlant).contains(secondPlant))) {
                 isCompanionPlant = false;
             }
         }
