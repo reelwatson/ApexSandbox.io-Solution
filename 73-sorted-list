@@ -11,14 +11,8 @@ public boolean isSorted(List<Integer> numbers) {
         }
     
     //For sorted ascending, create copy of numbers, use sort(), and compare the two lists to see if true
-    if (numbers == ascendingNumbers) {
+    if ((numbers == ascendingNumbers) || (numbers == descendingNumbers)) {
         sortedSomehow = true;
     }
-
-    //For sorted descending, create copy of numbers, iterate from numbers.size() - 1 to 0 index,
-    //and compare the two lists to see if true
-    else if (descendingNumbers == numbers) {
-                sortedSomehow = true;
-            }
     return sortedSomehow;
 }
