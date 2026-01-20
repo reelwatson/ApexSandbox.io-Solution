@@ -8,14 +8,35 @@ public boolean isSorted(List<Integer> numbers) {
 
     List<Integer> descendingNumbers = new List<Integer>(numbers);
 
+    //Reverse ascending List to create descending List
     for (Integer i = ascendingNumbers.size() - 1; i >= 0; i--) {
-            descendingNumbers.add(numbers[i]);    
+            descendingNumbers.add(ascendingNumbers[i]);    
         }
-    
-    //For sorted ascending, create copy of numbers, use sort(), and compare the two lists to see if true
-    
+        
     if ((numbers.equals(ascendingNumbers)) || (numbers.equals(descendingNumbers))) {
         sortedSomehow = true;
     }
+
     return sortedSomehow;
 }
+
+/*
+Test 9 failed: System.AssertException: Assertion Failed: List was sorted descending: Expected: true, Actual: false
+List<Integer> nums = new List<Integer>();
+for (Integer i=-1; i>-1000; i += i) {
+    nums.add(i);
+}
+Boolean result = isSorted(nums);
+System.assertEquals(true, result, 'List was sorted descending');
+
+
+
+Test 10 failed: System.AssertException: Assertion Failed: List was sorted descending: Expected: true, Actual: false
+List<Integer> nums = new List<Integer>();
+for (Integer i=-1; i>-1000; i += i) {
+    nums.add(i);
+    nums.add(i);
+}
+Boolean result = isSorted(nums);
+System.assertEquals(true, result, 'List was sorted descending');
+*/
