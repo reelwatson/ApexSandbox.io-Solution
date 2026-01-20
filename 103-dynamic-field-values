@@ -1,0 +1,15 @@
+public List<String> getFieldsValue(Account acc, List<String> fields)
+{
+    // code here
+    List<String> fieldValueList = new List<String>();
+    String fieldValue; //acceptable if the field returns null to the String list
+
+    for (String field : fields) {
+
+    }
+
+}
+
+// Use SObject.get() to obtain field's value from sObject record
+// Use String.valueOf() to convert from Object to String before adding to list, since
+// you cannot add the value from the get method directly into a string list
