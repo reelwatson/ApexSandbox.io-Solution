@@ -86,3 +86,4 @@ If the first plant is tomatoes, the second should be onions.
 If none of the above match, the plants are not companions.
 No plants means our condition is true: all plants are next to a companion plant 
 if there are no plants.
+*/
