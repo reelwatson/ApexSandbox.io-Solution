@@ -11,7 +11,7 @@ public boolean isSorted(List<Integer> numbers) {
         }
     
     //For sorted ascending, create copy of numbers, use sort(), and compare the two lists to see if true
-    if ((numbers == ascendingNumbers) || (numbers == descendingNumbers)) {
+    if ((numbers.equals(ascendingNumbers)) || (numbers.equals(descendingNumbers))) {
         sortedSomehow = true;
     }
     return sortedSomehow;
