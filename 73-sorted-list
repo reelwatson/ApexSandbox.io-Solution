@@ -15,11 +15,11 @@ public boolean isSorted(List<Integer> numbers) {
     //and compare the two lists to see if true
     else if {
         for (Integer i == numbers.size() - 1; i >= 0; i--) {
-            descendingNumbers.add(numbers[i]);
-            if (descendingNumbers == numbers) {
+            descendingNumbers.add(numbers[i]);    
+        }
+        if (descendingNumbers == numbers) {
                 sortedSomehow = true;
             }
-        }
     }
     return sortedSomehow;
 }
