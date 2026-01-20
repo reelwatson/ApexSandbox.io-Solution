@@ -9,3 +9,12 @@ public void setParent(Account acc, Contact con, Opportunity opp) {
         }
     }
 }
+/*
+Test 1 failed: System.AssertException: Assertion Failed: Parent account for opportunity should be 0018c00002CQU9EAAX: Expected: 0018c00002CQU9EAAX, Actual: 0018c00002CQU8zAAH
+Account acc = new Account(Id = '0018c00002CQU9EAAX', Name = 'Acme Enterprises');
+Contact con = new Contact(AccountId = '0018c00002CQU9EAAX', LastName = 'Doe');
+Opportunity opp = new Opportunity(AccountId = '0018c00002CQU8zAAH', Name = 'Acme');
+setParent(acc, con, opp);
+System.assertEquals('0018c00002CQU9EAAX', con.AccountId, 'Parent account for contact should be 0018c00002CQU9EAAX');
+System.assertEquals('0018c00002CQU9EAAX', opp.AccountId, 'Parent account for opportunity should be 0018c00002CQU9EAAX');
+*/
