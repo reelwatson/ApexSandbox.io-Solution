@@ -5,14 +5,15 @@ public boolean isSorted(List<Integer> numbers) {
     //Create two new lists to hold copies of numbers
     List<Integer> ascendingNumbers = new List<Integer>(numbers);
     ascendingNumbers.sort();
-    
-    List<Integer> descendingNumbers = new List<Integer>();
 
-    for (Integer i = numbers.size() - 1; i >= 0; i--) {
+    List<Integer> descendingNumbers = new List<Integer>(numbers);
+
+    for (Integer i = ascendingNumbers.size() - 1; i >= 0; i--) {
             descendingNumbers.add(numbers[i]);    
         }
     
     //For sorted ascending, create copy of numbers, use sort(), and compare the two lists to see if true
+    
     if ((numbers.equals(ascendingNumbers)) || (numbers.equals(descendingNumbers))) {
         sortedSomehow = true;
     }
