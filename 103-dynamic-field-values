@@ -14,4 +14,4 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
 // Use SObject.get() to obtain field's value from sObject record
 // Use String.valueOf() to convert from Object to String before adding to list, since
 // you cannot add the value from the get method directly into a string list
-// OR cast to String???
+// OR cast to String??? No - some fields are Decimals, cannot cast
