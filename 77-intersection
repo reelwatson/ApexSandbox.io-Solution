@@ -8,3 +8,13 @@ public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
     }
     return intersectionSet;
 }
+
+/*
+OR clone one of the sets and use the retainAll method 
+to retain only the elements present in the second set
+
+    Set<Integer> intersectionSet = set1.clone();
+    intersectionSet.retainAll(set2);
+    return intersectionSet;
+
+*/
