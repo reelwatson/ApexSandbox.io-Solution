@@ -3,3 +3,6 @@ public Boolean containsDuplicates(List<Integer> nums) {
     Set<Integer> numsSet = new Set<Integer>(nums);
     return numsSet.size() != nums.size();
 }
+
+// returns true if the list has more than one occurence of the same number, 
+// and returns false if every element in the list is unique.
