@@ -1,0 +1,28 @@
+public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
+    //code here
+    List<Contact> deduplicatedContactsList = new List<Contact>();
+
+    //Get Set of emails??
+    Set<Contact> deduplicatedContactsSet = new Set<Contact>();
+
+    for (Contact con : contacts) {
+        if (!deduplicatedContactsSet.contains(contacts.get(con.Email))) {
+
+        }
+    }
+
+    // Add everything from the created Set to the List created at the beginning
+
+    return deduplicatedContactsList;
+}
+
+/*
+Return a List that contains only the unique contacts from the original list, 
+based on their Email field.
+The deduplication must be case-insensitive 
+(e.g., 'test@example.com' and 'Test@Example.com' are considered the same email).
+If multiple contacts have the same email, 
+only the first contact found in the original list should be kept.
+Contacts with a null or blank email ('') should also be deduplicated. 
+Only the first contact with a blank email should be kept.
+*/
