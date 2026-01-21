@@ -6,5 +6,7 @@ public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
     if (numsSet1.equals(numsSet2)) {
         return true;
     }
-
+    else {
+        return false;
+    }
 }
