@@ -7,6 +7,12 @@ public List<Account> getAccountsFromJSONString(String inputJSON){
 
     else if (!String.isBlank(inputJSON)) {
         deserializedAccountList = (List<Account>) JSON.deserialize(inputJSON, List<Account>.class);
+        // runtime reference to data type
+        // Similar examples: 
+        // Account acc = (Account) JSON.deserialize(json, Account.class);
+        // Map<String, Account> m = (Map<String, Account>) JSON.deserialize(json, Map<String, Account>.class);
+        // MyWrapper w =(MyWrapper) JSON.deserialize(json, MyWrapper.class);
+
     }
 
     return deserializedAccountList;
