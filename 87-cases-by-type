@@ -3,10 +3,10 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     Map<String, List<Case>> casesMap = new Map<String,List<Case>>();
     for (Case c : cases) {
         if (c.Type != null && casesMap.containsKey(c.Type)) {
-            casesMap.get(c.Type).add(c);
+            casesMap.get(c.Type).add(c); // Chain methods to add the Case based on the key
         }
         else if (c.Type != null) { // I KNOW I'm duplicating null checks here but I HATE nested if statements
-            casesMap.put(c.Type, new List<Case>{c});
+            casesMap.put(c.Type, new List<Case>{c}); // add a new List since the key/value pair does not already exist
         }
     }
 
