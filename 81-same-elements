@@ -1,0 +1,10 @@
+public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
+    //code here
+    Set<Integer> numsSet1 = new Set<Integer>(nums1);
+    Set<Integer> numsSet2 = new Set<Integer>(nums2);
+
+    if (numsSet1.equals(numsSet2)) {
+        return true;
+    }
+
+}
