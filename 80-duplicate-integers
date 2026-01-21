@@ -6,5 +6,5 @@ public Boolean containsDuplicates(List<Integer> nums) {
             numsSet.add(num);
         }
     }
-    return (numsSet.size == nums.size());
+    return (numsSet.size() == nums.size());
 }
