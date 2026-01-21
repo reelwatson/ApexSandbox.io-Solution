@@ -1,0 +1,6 @@
+public Boolean containsDuplicates(List<Integer> nums) {
+    //code here
+    Set<Integer> numsSet = Set.addAll(nums);
+
+    return numsSet;
+}
