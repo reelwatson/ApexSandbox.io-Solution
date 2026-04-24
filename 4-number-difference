@@ -1,6 +1,8 @@
 public Integer diff(Integer a, Integer b) {
     //code here
+    Integer absDiff;
     if (a != null && b != null){
-        return Math.abs(a - b);
+        absDiff = Math.abs(a - b);
     }
+    return absDiff;
 }
