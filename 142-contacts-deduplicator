@@ -11,7 +11,7 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
                 con.Email.toLowerCase();
             }
             else {
-                con.Email == '';
+                con.Email = '';
             }
             deduplicatedContactsSet.add(con);
         // }
