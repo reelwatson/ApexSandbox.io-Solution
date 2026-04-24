@@ -14,7 +14,7 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
                 con.Email = '';
             }
 
-            if (deduplicatedContactsSet.contains(con)) {
+            if (!deduplicatedContactsSet.contains(con)) {
                 deduplicatedContactsSet.add(con);
             }
         // }
