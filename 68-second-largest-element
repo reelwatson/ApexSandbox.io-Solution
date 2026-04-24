@@ -1,0 +1,21 @@
+public Integer secondLargest(List<Integer> numbers) {
+    //code here
+    Integer secondLargestNumber = -2147483647;
+    Integer largestNumber = -2147483646;
+
+    if (numbers != null && !numbers.isEmpty()) {
+        // numbers.sort();
+        // Integer secondLargestNumberIndex = numbers.size() - 2;
+        // secondLargestNumber = numbers.get(secondLargestNumberIndex);
+        for (Integer num : numbers) {
+            if (num > largestNumber) {
+                secondLargestNumber = largestNumber;
+                largestNumber = num;
+            }
+            else if (num < largestNumber && num > secondLargestNumber) {
+                secondLargestNumber = num;
+            }
+        }
+    }
+    return secondLargestNumber;
+}
