@@ -6,13 +6,13 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     Set<Contact> deduplicatedContactsSet = new Set<Contact>();
 
     for (Contact con : contacts) {
-        if (!deduplicatedContactsSet.contains(contacts.get(con.Email))) {
+        // if (!deduplicatedContactsSet.contains(contacts.get(con.Email))) {
 
-        }
+        // }
     }
 
     // Add everything from the created Set to the List created at the beginning
-
+    deduplicatedContactsList.addAll(deduplicatedContactsSet);
     return deduplicatedContactsList;
 }
 
