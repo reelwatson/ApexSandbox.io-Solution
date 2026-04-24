@@ -9,17 +9,15 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     Set<String> emails = new Set<String>();
     for (Contact con : contacts) {
         String email = '';
+
         if (!String.isBlank(con.Email)) {
             email = con.Email.toLowerCase();
         }
+        
         if (!emails.contains(email)) {
             emails.add(email);
             deduplicatedContactsList.add(con);
         }
-        // Get email and convert to lowercase IF not null
-        // If null then convert to ''
-        // Check against Set to see if email does not already exist in Set
-        // If email does not already exist in set then add to con to list
     }
     return deduplicatedContactsList;
 }
