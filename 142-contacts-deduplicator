@@ -2,26 +2,25 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     //code here
     List<Contact> deduplicatedContactsList = new List<Contact>();
 
-    //Get Set of emails??
-    Set<Contact> deduplicatedContactsSet = new Set<Contact>();
-
-    for (Contact con : contacts) {
-        // if (!deduplicatedContactsSet.contains(contacts.get(con.Email))) {
-            if (con.Email != null && !String.isBlank(con.Email)) {
-                con.Email.toLowerCase();
-            }
-            else {
-                con.Email = '';
-            }
-
-            if (!deduplicatedContactsSet.contains(con)) {
-                deduplicatedContactsSet.add(con);
-            }
-        // }
+    if (contacts == null || contacts.isEmpty()) {
+        return new List<Contact>();
     }
-
-    // Add everything from the created Set to the List created at the beginning
-    deduplicatedContactsList.addAll(deduplicatedContactsSet);
+    
+    Set<String> emails = new Set<String>();
+    for (Contact con : contacts) {
+        String email = '';
+        if (!String.isBlank(con.Email)) {
+            email = con.Email.toLowerCase();
+        }
+        if (!emails.contains(email)) {
+            emails.add(email);
+            deduplicatedContactsList.add(con);
+        }
+        // Get email and convert to lowercase IF not null
+        // If null then convert to ''
+        // Check against Set to see if email does not already exist in Set
+        // If email does not already exist in set then add to con to list
+    }
     return deduplicatedContactsList;
 }
 
