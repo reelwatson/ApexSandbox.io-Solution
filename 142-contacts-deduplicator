@@ -7,7 +7,8 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
 
     for (Contact con : contacts) {
         // if (!deduplicatedContactsSet.contains(contacts.get(con.Email))) {
-
+            con.Email.toLowerCase();
+            deduplicatedContactsSet.add(con);
         // }
     }
 
