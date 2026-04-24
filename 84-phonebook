@@ -1,0 +1,17 @@
+public Map<String, String> phonebook(List<Contact> contacts) {
+    public Map<String, String> phonebook(List<Contact> contacts) {
+    //code here
+    Map<String,String> phonebookMap = new Map<String,String>();
+
+    if (contacts == null) {
+        return phonebookMap;
+    }
+
+    for (Contact con : contacts) {
+        if (con.Phone != null) {
+            phonebookMap.put(con.Name, con.Phone);
+        }
+    }
+    return phonebookMap;
+}
+}
