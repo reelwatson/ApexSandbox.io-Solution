@@ -13,7 +13,10 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
             else {
                 con.Email = '';
             }
-            deduplicatedContactsSet.add(con);
+
+            if (deduplicatedContactsSet.contains(con)) {
+                deduplicatedContactsSet.add(con);
+            }
         // }
     }
 
