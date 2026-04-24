@@ -8,12 +8,15 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     
     Set<String> emails = new Set<String>();
     for (Contact con : contacts) {
+        // Could use ternary operator here to assign String value BUT
+        // below statement is more readable
         String email = '';
 
         if (!String.isBlank(con.Email)) {
             email = con.Email.toLowerCase();
         }
         
+        // Eliminate need for any 'continue' statement
         if (!emails.contains(email)) {
             emails.add(email);
             deduplicatedContactsList.add(con);
