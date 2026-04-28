@@ -1,0 +1,18 @@
+public String ageGroup(Integer n) {
+    //code here
+    if (n == null || n < 0) {
+        return 'Is this a real person?';
+    }
+    else if (n >= 22) {
+        return 'Adult';
+    }
+    else if (n >= 15 && n <= 21) {
+        return 'Youth'; // Ah yes, the youths. I love the youths.
+    }
+    else if (n >= 2 && n <= 14) {
+        return 'Child';
+    }
+    else {
+        return 'Infant';
+    }
+}
