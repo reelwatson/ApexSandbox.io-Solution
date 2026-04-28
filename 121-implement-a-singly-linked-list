@@ -1,0 +1,97 @@
+public class LinkedList{
+
+    public Node head;
+    public Node tail;
+    Integer size;
+    
+    public LinkedList() {
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
+    }
+
+    public void addToFront(Integer value){
+        // Put integer at the front of a list
+        // Constant time operation
+        Node addToFrontNode = new Node(value);
+        if (this.head == null) {
+            this.head = addToFrontNode;
+            this.tail = this.head;
+        }
+        else {
+            addToFrontNode.next = this.head;
+            this.head = addToFrontNode;
+        }
+        this.size++;
+    }
+
+    public Integer removeFromFront(){
+        // Remove element from the front of the list
+        // Constant time operation
+        // Null check, and if true return null
+        if (this.size == 0) {
+            return null;
+        }
+
+        Node removeFromFrontNode = this.head;
+        this.head = this.head.next;
+        this.size--;
+        return removeFromFrontNode.data;
+    }
+
+    public void addToTail(Integer value){
+        // Add element to the end of the list
+        // Constant time (as a challenge), aka no loops
+        Node addToTailNode = new Node(value);
+
+        if (this.head == null) {
+            this.head = addToTailNode;
+            this.tail = this.head;
+        }
+        else {
+            this.tail.next = addToTailNode;
+            this.tail = addToTailNode;
+        }
+        this.size++;
+
+    }
+    public Integer removeFromTail(){
+        // Remove last element in the list
+        // Null check, and if true return null
+        if (this.size == 0) {
+            return null;
+        }   
+        if (this.size == 1) {
+            Node singleNode = this.head;
+            this.head = null;
+            this.size--;
+            return singleNode.data;
+        }
+        Node currentNode = this.head;
+        Node newTail = null;
+        while (currentNode.next != null) {
+            newTail = currentNode;
+            currentNode = currentNode.next;
+        }
+        this.tail = newTail;
+        tail.next = null;
+        this.size--;
+
+        return currentNode.data;
+    }
+    public Integer size(){
+        // check size of list
+        return this.size;
+    }    
+}
+
+public class Node{
+    // Set variables for the class
+    Integer data;
+    Node next;
+
+    // Constructor method
+    public Node(Integer data) {
+        this.data = data;
+    }
+}
