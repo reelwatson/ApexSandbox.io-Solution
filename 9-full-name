@@ -1,4 +1,7 @@
 public String formatName(String firstName, String lastName) {
     //code here
-    return firstName + ' ' + lastName;
+    if (!String.isBlank(firstName) && !String.isBlank(lastName)) {
+        return firstName + ' ' + lastName;
+    }
+    return null;
 }
