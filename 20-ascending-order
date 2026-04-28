@@ -1,5 +1,8 @@
 public Boolean ascendingOrder(Integer a, Integer b, Integer c) {
     //code here
+    if (a == null || b == null || c == null) {
+        return false;
+    }
     if (a <= b && b <= c) {
         return true;
     }
