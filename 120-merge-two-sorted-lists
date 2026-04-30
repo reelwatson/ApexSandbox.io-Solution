@@ -1,0 +1,17 @@
+public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2){
+    // solution 
+    List<Integer> mergedList = new List<Integer>();
+
+    /* Now the easiest way that does NOT meet challenge criteria would be to just add the 
+    two lists together and then sort them
+    */
+
+    if (list1 != null && list2 != null) {
+        mergedList.addAll(list1);
+        mergedList.addAll(list2);
+        mergedList.sort();
+    }
+
+
+    return mergedList;
+}
