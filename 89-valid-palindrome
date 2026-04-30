@@ -1,0 +1,18 @@
+public Boolean isPalindrome(String str){
+//code here
+Boolean stringIsPalindrome = false;
+
+
+String regExp = '[^0-9a-zA-Z]';
+String cleanedStr = str.replaceAll(regExp, '').toLowerCase();
+
+// First method: reverse string and compare
+String reversedString = cleanedStr.reverse();
+if (cleanedStr == reversedString) {
+    stringIsPalindrome = true;
+    }
+
+return stringIsPalindrome;
+}
+
+// Second method: compare ends of simpleString to each other
