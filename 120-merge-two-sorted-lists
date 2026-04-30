@@ -12,6 +12,10 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
         mergedList.sort();
     }
 
-
     return mergedList;
+
+    /*
+    However, for the sake of learning, we want to iterate through each list and then compare values,
+    adding the smaller elements before the larger ones
+    */
 }
