@@ -18,5 +18,20 @@ public static List<Integer> mergeLists(List<Integer> list1, List<Integer> list2)
     However, for the sake of learning, we want to iterate through each list and then compare values,
     adding the smaller elements before the larger ones
     Nevermind that becomes an o(n^2) operation in terms of time
+
+    if (list1 != null && list2 != null) {
+        for (Integer firstInt : list1) {
+            for (Integer secondInt : list2) {
+                if (firstInt < secondInt) {
+                    mergedList.add(firstInt)
+                }
+                else {
+                    mergedList.add(secondInt)
+                }
+            }
+        }
+    }
+
+    Gah the nesting hurts my eyes
     */
 }
