@@ -3,7 +3,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     // Since the problem outlines that a loop WILL time out we should use a Map of some kind
     Integer oppIndex = -1;
     if (opportunities != null && !opportunities.isEmpty()) {
-        oppIndex = opportunities.get(indexOf(target));
+        oppIndex = opportunities.indexOf(opportunities.get(target));
     }
 
     return oppIndex;
