@@ -1,0 +1,5 @@
+public static Integer search(List<Opportunity> opportunities, Integer target){
+    // solution here
+    // Since the problem outlines that a loop WILL time out we should use a Map of some kind
+    if (opportunities != null && !opportunities.isEmpty())
+}
